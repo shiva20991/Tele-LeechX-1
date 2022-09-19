@@ -89,8 +89,8 @@ def __changeFileName(to_upload_file, u_id):
     elif CUSTOM_PREFIX:
         if opath.isfile(to_upload_file):
             if not to_upload_file.startswith(CUSTOM_PREFIX):
-                orename(to_upload_file, f"{CUSTOM_PREFIX}{to_upload_file}")
-                to_upload_file = f"{CUSTOM_PREFIX}{to_upload_file}"
+                orename(to_upload_file, f"{CUSTOM_PREFIX} {to_upload_file}")
+                to_upload_file = f"{CUSTOM_PREFIX} {to_upload_file}"
         else:
             for root, _, files in owalk(to_upload_file):
                 for org in files:
